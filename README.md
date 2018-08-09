@@ -130,7 +130,7 @@ updater('./settings.json').set('tags', 'cool', function(err) {
 ```
 
 ```js
-updater('./settings.json').update('author', { 'username': 'hacksparrow' }, function(err) {
+updater('./settings.json').set('author', { 'username': 'hacksparrow' }, function(err) {
   if (err) return console.log(err)
   var pkg = getParsedPackage()
   console.log(pkg.author)
@@ -140,7 +140,7 @@ updater('./settings.json').update('author', { 'username': 'hacksparrow' }, funct
 You can target a sub-property using the dot notation:
 
 ```js
-updater('./settings.json').update('author.age', 200, function(err) {
+updater('./settings.json').set('author.age', 200, function(err) {
   if (err) return console.log(err)
   var pkg = getParsedPackage()
   console.log(pkg.author.age) // 200
